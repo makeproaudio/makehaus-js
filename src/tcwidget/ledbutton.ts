@@ -125,6 +125,9 @@ export class LedButton extends TCWidget {
   // ToDo: create color names map
   private hexColorFromString = (color: string): number => {
     // parse hex or decimal color value from string
+    if (!(color && typeof color == 'string')) {
+      throw Error(`No valid color given, received ${typeof color}`);
+    }
     const colval = color.startsWith('#') ? parseInt(color.slice(1), 16) : parseInt(color);
     if (isNaN(colval)) {
       // ToDo: lookup color value from color names map
