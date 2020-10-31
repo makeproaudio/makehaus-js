@@ -87,17 +87,26 @@ export class Hub extends EventEmitter {
     }
   };
 
-  init = (host: string, port: number) => {
-    /* Start listening to the client for events. */
-    client.start(host, port);
+  init = async (host: string, port: number) => {
+    return new Promise<void>((resolve, reject) => {
 
-    /* Register event handlers for different event types on the server. */
-    client.on('error', (e: any) => console.log('error %s', e));
-    client.on('connect', () => console.log('Connection established to hub'));
-    client.on('close', (e: any) => console.log('close %s', e));
+      /* Start listening to the client for events. */
+      client.start(host, port);
 
-    /* register a data callback which is used as a high speed lane for all significant events */
-    client.on('data', (json: any) => this.dataCallback(json));
+      /* Register event handlers for different event types on the server. */
+      client.on('error', (e: any) => {
+        console.log('error %s', e);
+        reject(e);
+      });
+      client.on('connect', () => {
+        console.log('Connection established to hub');
+        resolve();
+      });
+      client.on('close', (e: any) => console.log('close %s', e));
+
+      /* register a data callback which is used as a high speed lane for all significant events */
+      client.on('data', (json: any) => this.dataCallback(json));
+    });
   };
 }
 
