@@ -31,10 +31,10 @@ abstract class TileEncoder extends TileBase<Encoder> {
   }
 
   private encoderTouched: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[this.trueIndex(what.idx)];
       widget.emit(EncoderEvents.TOUCHED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const encoderListener = l as EncoderListener;
         encoderListener.onEncoderTouched(widget);
       });
@@ -42,10 +42,10 @@ abstract class TileEncoder extends TileBase<Encoder> {
   };
 
   private encoderUntouched: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[this.trueIndex(what.idx)];
       widget.emit(EncoderEvents.UNTOUCHED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const encoderListener = l as EncoderListener;
         encoderListener.onEncoderUntouched(widget);
       });
@@ -53,10 +53,10 @@ abstract class TileEncoder extends TileBase<Encoder> {
   };
 
   private encoderPressed: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[this.trueIndex(what.idx)];
       widget.emit(EncoderEvents.PRESSED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const encoderListener = l as EncoderListener;
         encoderListener.onEncoderPressed(widget);
       });
@@ -64,10 +64,10 @@ abstract class TileEncoder extends TileBase<Encoder> {
   };
 
   private encoderReleased: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[this.trueIndex(what.idx)];
       widget.emit(EncoderEvents.RELEASED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const encoderListener = l as EncoderListener;
         encoderListener.onEncoderReleased(widget);
       });
@@ -75,11 +75,11 @@ abstract class TileEncoder extends TileBase<Encoder> {
   };
 
   private encoderTurnedRight: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[this.trueIndex(what.idx)];
       const accl = this.getAcceleratedValue(what.val);
       widget.emit(EncoderEvents.RIGHT, widget, accl);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const encoderListener = l as EncoderListener;
         encoderListener.onEncoderTurnedRight(widget, accl);
       });
@@ -87,11 +87,11 @@ abstract class TileEncoder extends TileBase<Encoder> {
   };
 
   private encoderTurnedLeft: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[this.trueIndex(what.idx)];
       const accl = this.getAcceleratedValue(what.val);
       widget.emit(EncoderEvents.LEFT, widget, accl);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const encoderListener = l as EncoderListener;
         encoderListener.onEncoderTurnedLeft(widget, accl);
       });

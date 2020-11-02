@@ -1,40 +1,40 @@
 {
-    "title": "MakeHaus Simple MotorFader 4",
-    "tilechains": [
+  "title": "MakeHaus Simple MotorFader 4",
+  "tilechains": [
+    {
+      "name": "tilechain-1",
+      "address": "localhost",
+      "port": 8192
+    }
+  ],
+  "rows": [
+    {
+      "name": "row-1",
+      "weight": 1,
+      "widgetstacks": [
         {
-            "name": "tilechain-1",
-            "address": "localhost",
-            "port": 8192
+          "name": "stack-1",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 500,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#00ff00",
+          "widgets": [
+            {
+              "name": "slider",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "fader",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.1.1.1",
+              "event": "MOVE"
+            }
+          ]
         }
-    ],
-    "rows": [
-        {
-            "name": "row-1",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-1",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 500,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#00ff00",
-                    "widgets": [
-                        {
-                            "name": "slider",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "fader",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.1.1.1",
-                            "event": "MOVE"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }

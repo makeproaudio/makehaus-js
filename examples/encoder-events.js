@@ -6,15 +6,15 @@ This file is part of MakeHaus JS, the MakeHaus API for Node.js, released under A
 const { hub, Tile, EncoderEvents } = require('..');
 
 hub.init('localhost', '8192');
-[Tile.ENCODER8, Tile.ENCODER12].forEach(type => {
-  hub.on(type, tile => {
+[Tile.ENCODER8, Tile.ENCODER12].forEach((type) => {
+  hub.on(type, (tile) => {
     console.log('New Encoder tile found. Fiddle with your encoder to see events');
-    tile.widgets.forEach(w => {
-      w.on(EncoderEvents.PRESSED, encoder => {
+    tile.widgets.forEach((w) => {
+      w.on(EncoderEvents.PRESSED, (encoder) => {
         console.log(`${encoder.widgetId} pressed`);
       });
 
-      w.on(EncoderEvents.RELEASED, encoder => {
+      w.on(EncoderEvents.RELEASED, (encoder) => {
         console.log(`${encoder.widgetId} released`);
       });
 
@@ -26,11 +26,11 @@ hub.init('localhost', '8192');
         console.log(`${encoder.widgetId} moved right by ${val}`);
       });
 
-      w.on(EncoderEvents.TOUCHED, encoder => {
+      w.on(EncoderEvents.TOUCHED, (encoder) => {
         console.log(`${encoder.widgetId} touched`);
       });
 
-      w.on(EncoderEvents.UNTOUCHED, encoder => {
+      w.on(EncoderEvents.UNTOUCHED, (encoder) => {
         console.log(`${encoder.widgetId} untouched`);
       });
     });

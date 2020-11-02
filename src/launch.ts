@@ -18,7 +18,7 @@ export const MakeHaus = {
 
         const joined = path.join(__dirname, webappFolder);
         app.use(express.static(joined));
-        app.get('/', function(req: any, res: any) {
+        app.get('/', function (req: any, res: any) {
           res.sendFile(path.join(joined, 'index.html'));
         });
         const finalWebappPort = config ? (config.webappPort ? config.webappPort : 3000) : 3000;

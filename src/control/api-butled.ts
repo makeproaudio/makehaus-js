@@ -37,13 +37,13 @@ abstract class TileLedButton extends TileBase<LedButton> {
   }
 
   buttonPressed: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       /* Find the widget that corresponds to the hardware button which was pressed and cast it to the correct Widget type. */
       const widget = this.widgets[what.idx] as LedButton;
 
       /* Every Widget is an event emitter - on that widget, emit the fact that the PRESSED event was triggered and pass the widget as data */
       widget.emit(LedButtonEvents.PRESSED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const buttonListener = l as ButtonListener;
         buttonListener.onButtonPressed(widget);
       });
@@ -51,10 +51,10 @@ abstract class TileLedButton extends TileBase<LedButton> {
   };
 
   buttonReleased: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[what.idx] as LedButton;
       widget.emit(LedButtonEvents.RELEASED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const buttonListener = l as ButtonListener;
         buttonListener.onButtonReleased(widget, what.val);
       });
@@ -62,7 +62,7 @@ abstract class TileLedButton extends TileBase<LedButton> {
   };
 
   forwardAsIs: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       client.send(what);
     },
   };

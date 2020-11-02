@@ -1,438 +1,406 @@
 {
-    "title": "MakeHaus Full Phone",
-    "tilechains": [
+  "title": "MakeHaus Full Phone",
+  "tilechains": [
+    {
+      "name": "tilechain-1",
+      "address": "localhost",
+      "port": 8192
+    }
+  ],
+  "rows": [
+    {
+      "name": "row-1",
+      "weight": 1,
+      "widgetstacks": [
         {
-            "name": "tilechain-1",
-            "address": "localhost",
-            "port": 8192
-        }
-    ],
-    "rows": [
-        {
-            "name": "row-1",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-1",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-1",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "encoder-1",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.1",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-2",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-2",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "encoder-2",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.2",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-3",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-3",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "encoder-3",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.3",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-4",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-4",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "encoder-4",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.4",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-5",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-5",
-                            "type": "SLIDER_HORIZONTAL"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-6",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-6",
-                            "type": "SLIDER_HORIZONTAL"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-7",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-7",
-                            "type": "SLIDER_HORIZONTAL"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-8",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff0000",
-                    "widgets": [
-                        {
-                            "name": "widget-8",
-                            "type": "SLIDER_HORIZONTAL"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-1",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-1",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "encoder-1",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.1",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-2",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-9",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-9",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-10",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-10",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-11",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-11",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-12",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-12",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-13",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-13",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-14",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-14",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-15",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-15",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-16",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "TYP"
-                    ],
-                    "defaultValue": "TYP",
-                    "color": "#ff9843",
-                    "widgets": [
-                        {
-                            "name": "widget-16",
-                            "type": "BUTTON"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-2",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-2",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "encoder-2",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.2",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-3",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-17",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-17",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-18",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-18",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-19",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-19",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-20",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-20",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-21",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-21",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-22",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-22",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-23",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-23",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-24",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        ">"
-                    ],
-                    "defaultValue": ">",
-                    "color": "#444444",
-                    "widgets": [
-                        {
-                            "name": "widget-24",
-                            "type": "EMPTY"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-3",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-3",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "encoder-3",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.3",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-4",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-4",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "encoder-4",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.4",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-5",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-5",
+              "type": "SLIDER_HORIZONTAL"
+            }
+          ]
+        },
+        {
+          "name": "stack-6",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-6",
+              "type": "SLIDER_HORIZONTAL"
+            }
+          ]
+        },
+        {
+          "name": "stack-7",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-7",
+              "type": "SLIDER_HORIZONTAL"
+            }
+          ]
+        },
+        {
+          "name": "stack-8",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff0000",
+          "widgets": [
+            {
+              "name": "widget-8",
+              "type": "SLIDER_HORIZONTAL"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "name": "row-2",
+      "weight": 1,
+      "widgetstacks": [
+        {
+          "name": "stack-9",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-9",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-10",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-10",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-11",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-11",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-12",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-12",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-13",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-13",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-14",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-14",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-15",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-15",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-16",
+          "context": "",
+          "label": "",
+          "values": ["TYP"],
+          "defaultValue": "TYP",
+          "color": "#ff9843",
+          "widgets": [
+            {
+              "name": "widget-16",
+              "type": "BUTTON"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "row-3",
+      "weight": 1,
+      "widgetstacks": [
+        {
+          "name": "stack-17",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-17",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-18",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-18",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-19",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-19",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-20",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-20",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-21",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-21",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-22",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-22",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-23",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-23",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-24",
+          "context": "",
+          "label": "",
+          "values": [">"],
+          "defaultValue": ">",
+          "color": "#444444",
+          "widgets": [
+            {
+              "name": "widget-24",
+              "type": "EMPTY"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

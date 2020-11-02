@@ -65,7 +65,7 @@ class HubWidgetHolder {
   };
 
   init = () => {
-    Object.values(Tile).forEach(t => {
+    Object.values(Tile).forEach((t) => {
       hub.on(t, (tile: TileBase<any>) => {
         tile.widgets.forEach((widget: TCWidget) => {
           this.evtSubject.next({ widget, tile });

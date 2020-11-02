@@ -20,7 +20,7 @@ class UIManager {
   socket: any;
   callbacks: Map<string, Function[]> = new Map();
 
-  receiveEvent = data => {
+  receiveEvent = (data) => {
     if (this.socket) {
       this.socket.emit('rx', data);
     }
@@ -63,9 +63,9 @@ class UIManager {
   private getUILayoutJSON = (): UILayout => {
     let maxInRow = -1;
     let uiLayout: UILayout = { title: this.title, rows: [] };
-    Array.from(Rows.getAll()).forEach(row => {
+    Array.from(Rows.getAll()).forEach((row) => {
       const uiRow: UIRow = { name: row.name(), weight: row.weight(), stacks: [] };
-      row.stacks().forEach(stack => {
+      row.stacks().forEach((stack) => {
         const stackBase: StackBase = stack as StackBase;
         const uiStack: UIStack = {
           name: stackBase.name(),
@@ -81,10 +81,10 @@ class UIManager {
         } else if (stackBase.parameter()!.getMetadata('values')) {
           uiStack.values = stackBase.parameter()!.getMetadata('values');
         }
-        const widgets = stack.widgets().filter(w => {
+        const widgets = stack.widgets().filter((w) => {
           return UIWidgetTypes.includes(w.type());
         });
-        widgets.forEach(widget => {
+        widgets.forEach((widget) => {
           const uiWidget: UIWidget = { name: widget.name(), type: widget.type(), weight: widget.weight() === undefined ? 1 : widget.weight()! };
           uiStack.widgets.push(uiWidget);
         });
@@ -128,7 +128,7 @@ class UIManager {
         /* Typically, communication is directed from the server to the client in all but one use case:
          * Software buttons can implement specific functionality. To listen to a software UI Button being pressed
          * ,use the 'tx' topic */
-        socket.on('tx', data => {
+        socket.on('tx', (data) => {
           const widget: WidgetBase | undefined = Widgets.get(data.widget.name) as WidgetBase;
           if (widget) {
             switch (widget.type()) {
