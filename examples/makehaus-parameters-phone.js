@@ -17,24 +17,20 @@ const animateBindsForward = ({ widgetStacks, typesStacks, bindStacks }) => {
 
   const colors = ['#ff0000', '#00ff00', '#0000ff', '#00ffff'];
   const colorMap = new Map();
-  [0, 1, 2, 3].forEach(n => {
+  [0, 1, 2, 3].forEach((n) => {
     colorMap.set(n, colors[n]);
     widgetStacks[n].setColor(colors[n]);
   });
 
-  const parametersOfStack = widgetStacks.map(s => s.parameter());
+  const parametersOfStack = widgetStacks.map((s) => s.parameter());
 
   const map = new Map();
   const selectedMap = new Map();
 
-  bindStacks.forEach(s => {
+  bindStacks.forEach((s) => {
     selectedMap.set(s, false);
-    const mappedIdx =
-      s
-        .parameter()
-        .id()
-        .split('-')[1] % 9;
-    s.parameter().addListener(evt => {
+    const mappedIdx = s.parameter().id().split('-')[1] % 9;
+    s.parameter().addListener((evt) => {
       if (evt.value) {
         switch (evt.value) {
           case '>':
@@ -48,20 +44,20 @@ const animateBindsForward = ({ widgetStacks, typesStacks, bindStacks }) => {
     map.set(s, mappedIdx);
   });
 
-  const toggleBind = s => {
+  const toggleBind = (s) => {
     console.log(`toggling ${map.get(s)} of stack ${s.name()}`);
     toggleSelected(s);
   };
 
-  const applyColor = s => {
+  const applyColor = (s) => {
     selectedMap.get(s) === true ? s.setColor(selectedColor) : s.setColor(unselectedColor);
   };
 
-  const updateParameterSelectedState = s => {
+  const updateParameterSelectedState = (s) => {
     selectedMap.set(s, !selectedMap.get(s));
   };
 
-  const handleBindColor = s => {
+  const handleBindColor = (s) => {
     applyColor(s);
   };
 
@@ -75,13 +71,13 @@ const animateBindsForward = ({ widgetStacks, typesStacks, bindStacks }) => {
     }
   };
 
-  const handleSelected = s => {
+  const handleSelected = (s) => {
     //unbind self
     const param = parametersOfStack[map.get(s)];
     param.unbind();
     //find next bind stack ahead of me which is unselected - the destination parameter
     const rightOfMe = bindStacks.slice(bindStacks.indexOf(s) + 1);
-    const nextUnselectedStack = rightOfMe.filter(s => selectedMap.get(s) === false)[0];
+    const nextUnselectedStack = rightOfMe.filter((s) => selectedMap.get(s) === false)[0];
     //bind self to destination parameter
     const mappedParamOfNextUnselectedStack = parametersOfStack[map.get(nextUnselectedStack)];
     param.bindFrom(mappedParamOfNextUnselectedStack, () => {});
@@ -90,7 +86,7 @@ const animateBindsForward = ({ widgetStacks, typesStacks, bindStacks }) => {
     bindAllToLeftToDestination(mappedParamOfNextUnselectedStack, leftOfMe, bindStacks.indexOf(s));
   };
 
-  const handleUnselected = s => {
+  const handleUnselected = (s) => {
     // unbind self
     const param = parametersOfStack[map.get(s)];
     param.unbind();
@@ -101,20 +97,16 @@ const animateBindsForward = ({ widgetStacks, typesStacks, bindStacks }) => {
     MakeHaus.refreshUI();
   };
 
-  const toggleSelected = s => {
+  const toggleSelected = (s) => {
     updateParameterSelectedState(s);
     selectedMap.get(s) ? handleSelected(s) : handleUnselected(s);
     handleBindColor(s);
   };
 
-  typesStacks.forEach(s => {
-    s.parameter().addListener(evt => {
+  typesStacks.forEach((s) => {
+    s.parameter().addListener((evt) => {
       if (evt.value) {
-        const mappedIdx =
-          s
-            .parameter()
-            .id()
-            .split('-')[1] % 5;
+        const mappedIdx = s.parameter().id().split('-')[1] % 5;
         switch (evt.value) {
           case 'TYP':
             toggle(mappedIdx);
@@ -127,7 +119,7 @@ const animateBindsForward = ({ widgetStacks, typesStacks, bindStacks }) => {
   });
 
   let i = 0;
-  const toggle = idx => {
+  const toggle = (idx) => {
     const available = [
       { min: 0, max: 100, step: 1, value: 0, type: ParameterType.NUMBER },
       { min: 0, max: 100, step: 10, value: 0, type: ParameterType.NUMBER },
@@ -145,16 +137,12 @@ const animateBindsCentralParam = ({ widgetStacks, typesStacks, bindStacks }) => 
   const central = Parameters.newParameter('maker', 'central');
   central.updateType({ min: 0, max: 100, step: 1, value: 0, type: ParameterType.NUMBER });
 
-  const parametersOfStack = widgetStacks.map(s => s.parameter());
+  const parametersOfStack = widgetStacks.map((s) => s.parameter());
 
-  bindStacks.forEach(s => {
-    s.parameter().addListener(evt => {
+  bindStacks.forEach((s) => {
+    s.parameter().addListener((evt) => {
       if (evt.value) {
-        const mappedIdx =
-          s
-            .parameter()
-            .id()
-            .split('-')[1] % 9;
+        const mappedIdx = s.parameter().id().split('-')[1] % 9;
         switch (evt.value) {
           case 'BOUND':
             parametersOfStack[mappedIdx].bindFrom(central, widgetStacks[mappedIdx].uiL());
@@ -169,14 +157,10 @@ const animateBindsCentralParam = ({ widgetStacks, typesStacks, bindStacks }) => 
     });
   });
 
-  typesStacks.forEach(s => {
-    s.parameter().addListener(evt => {
+  typesStacks.forEach((s) => {
+    s.parameter().addListener((evt) => {
       if (evt.value) {
-        const mappedIdx =
-          s
-            .parameter()
-            .id()
-            .split('-')[1] % 5;
+        const mappedIdx = s.parameter().id().split('-')[1] % 5;
         switch (evt.value) {
           case 'TYP':
             toggle(mappedIdx);
@@ -189,7 +173,7 @@ const animateBindsCentralParam = ({ widgetStacks, typesStacks, bindStacks }) => 
   });
 
   let i = 0;
-  const toggle = idx => {
+  const toggle = (idx) => {
     const available = [
       { min: 0, max: 100, step: 1, value: 0, type: ParameterType.NUMBER },
       { values: ['A', 'B', 'C', 'D', 'E'], value: 'A', type: ParameterType.STRING_ARRAY },
@@ -207,13 +191,13 @@ MakeHaus.init(
   () => {},
   () => {
     /* UI Initialization was successful. The web app is now running */
-    const dynamicWidgetStackNames = [1, 2, 3, 4].map(id => 'stack-' + id);
-    const typeButtonStackNames = [5, 6, 7, 8].map(id => 'stack-' + id);
-    const bindButtonStacknames = [9, 10, 11, 12].map(id => 'stack-' + id);
+    const dynamicWidgetStackNames = [1, 2, 3, 4].map((id) => 'stack-' + id);
+    const typeButtonStackNames = [5, 6, 7, 8].map((id) => 'stack-' + id);
+    const bindButtonStacknames = [9, 10, 11, 12].map((id) => 'stack-' + id);
 
-    const widgetStacks = Stacks.getAll().filter(stack => dynamicWidgetStackNames.includes(stack.name()));
-    const typesStacks = Stacks.getAll().filter(stack => typeButtonStackNames.includes(stack.name()));
-    const bindStacks = Stacks.getAll().filter(stack => bindButtonStacknames.includes(stack.name()));
+    const widgetStacks = Stacks.getAll().filter((stack) => dynamicWidgetStackNames.includes(stack.name()));
+    const typesStacks = Stacks.getAll().filter((stack) => typeButtonStackNames.includes(stack.name()));
+    const bindStacks = Stacks.getAll().filter((stack) => bindButtonStacknames.includes(stack.name()));
     runnable({ widgetStacks, typesStacks, bindStacks });
   }
 );

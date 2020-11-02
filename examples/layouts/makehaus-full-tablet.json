@@ -1,1215 +1,1191 @@
 {
-    "title": "MakeHaus Full Tablet",
-    "tilechains": [
+  "title": "MakeHaus Full Tablet",
+  "tilechains": [
+    {
+      "name": "tilechain-1",
+      "address": "localhost",
+      "port": 8192
+    }
+  ],
+  "rows": [
+    {
+      "name": "row-1",
+      "weight": 1,
+      "widgetstacks": [
         {
-            "name": "tilechain-1",
-            "address": "localhost",
-            "port": 8192
+          "name": "stack-1",
+          "weight": 1,
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-1",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-2",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-2",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-3",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-3",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-4",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-4",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-5",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-5",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-6",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-6",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-7",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-7",
+              "type": "BUTTON"
+            }
+          ]
+        },
+        {
+          "name": "stack-8",
+          "context": "",
+          "label": "",
+          "color": "blue",
+          "widgets": [
+            {
+              "name": "widget-8",
+              "type": "BUTTON"
+            }
+          ]
         }
-    ],
-    "rows": [
+      ]
+    },
+    {
+      "name": "row-2",
+      "weight": 2,
+      "widgetstacks": [
         {
-            "name": "row-1",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-1",
-                    "weight": 1,
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-1",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-2",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-2",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-3",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-3",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-4",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-4",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-5",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-5",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-6",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-6",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-7",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-7",
-                            "type": "BUTTON"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-8",
-                    "context": "",
-                    "label": "",
-                    "color": "blue",
-                    "widgets": [
-                        {
-                            "name": "widget-8",
-                            "type": "BUTTON"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-9",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-9",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-1",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.1",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-2",
-            "weight": 2,
-            "widgetstacks": [
-                {
-                    "name": "stack-9",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-9",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-1",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.1",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-10",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-10",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-2",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.2",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-11",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-11",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-3",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.3",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-12",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-12",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-4",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.4",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-13",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-13",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-5",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.1.1",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-14",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-14",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-6",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.1.2",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-15",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-15",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-7",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.1.3",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-16",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-16",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "tcwidget-8",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.1.4",
-                            "event": "TURN"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-10",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-10",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-2",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.2",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-3",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-17",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-17",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-9",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.1",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-18",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-18",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-10",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.2",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-19",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-19",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-11",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.3",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-20",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-20",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-12",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.4",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-21",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-21",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-13",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.1",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-22",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-22",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-14",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.2",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-23",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-23",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-15",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.3",
-                            "event": "TURN"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-24",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-24",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-16",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.4",
-                            "event": "TURN"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-11",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-11",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-3",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.3",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-4",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-25",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-25",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-17",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-26",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-26",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-18",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.2",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-27",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-27",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-19",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.3",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-28",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-28",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-20",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.2.4",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-29",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-29",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-21",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-30",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-30",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-22",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.2",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-31",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-31",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-23",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.3",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-32",
-                    "context": "",
-                    "label": "",
-                    "values": [
-                        "OFF",
-                        "ON"
-                    ],
-                    "defaultValue": "OFF",
-                    "color": "darkgrey",
-                    "widgets": [
-                        {
-                            "name": "widget-32",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-24",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.2.2.4",
-                            "event": "PRESS"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-12",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-12",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-4",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.4",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-5",
-            "weight": 5,
-            "widgetstacks": [
-                {
-                    "name": "stack-33",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-33",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-25",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.1.1.1",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-34",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-34",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-26",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.1.1.2",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-35",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-35",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-27",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.1.1.3",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-36",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-36",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-28",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.1.1.4",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-37",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-37",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-29",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.2.1.1",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-38",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-38",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-30",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.2.1.2",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-39",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-39",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-31",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.2.1.3",
-                            "event": "MOVE"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-40",
-                    "context": "",
-                    "label": "",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "lightgreen",
-                    "widgets": [
-                        {
-                            "name": "widget-40",
-                            "type": "SLIDER_VERTICAL"
-                        },
-                        {
-                            "name": "tcwidget-32",
-                            "tilechain": "tilechain-1",
-                            "identifier": "4F.2.1.4",
-                            "event": "MOVE"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-13",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-13",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-5",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.1.1",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-6",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-41",
-                    "context": "",
-                    "label": "ZONE 1",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-41",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-33",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.1.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-42",
-                    "context": "",
-                    "label": "ZONE 2",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-42",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-34",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.1.2",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-43",
-                    "context": "",
-                    "label": "ZONE 3",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-43",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-35",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.1.3",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-44",
-                    "context": "",
-                    "label": "ZONE 4",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-44",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-36",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.1.4",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-45",
-                    "context": "",
-                    "label": "ZONE 5",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-45",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-37",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.1.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-46",
-                    "context": "",
-                    "label": "ZONE 6",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-46",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-38",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.1.2",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-47",
-                    "context": "",
-                    "label": "ZONE 7",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-47",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-39",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.1.3",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-48",
-                    "context": "",
-                    "label": "ZONE 8",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#ff7575",
-                    "widgets": [
-                        {
-                            "name": "widget-48",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-40",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.1.4",
-                            "event": "PRESS"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-14",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-14",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-6",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.1.2",
+              "event": "TURN"
+            }
+          ]
         },
         {
-            "name": "row-7",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-49",
-                    "context": "",
-                    "label": "TOPIC 1",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#008000",
-                    "widgets": [
-                        {
-                            "name": "widget-49",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-41",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.2.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-50",
-                    "context": "",
-                    "label": "TOPIC 2",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#FFA500",
-                    "widgets": [
-                        {
-                            "name": "widget-50",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-42",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.2.2",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-51",
-                    "context": "",
-                    "label": "TOPIC 3",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#FF0000",
-                    "widgets": [
-                        {
-                            "name": "widget-51",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-43",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.2.3",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-52",
-                    "context": "",
-                    "label": "TOPIC 4",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#800080",
-                    "widgets": [
-                        {
-                            "name": "widget-52",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-44",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.1.2.4",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-53",
-                    "context": "",
-                    "label": "TOPIC 5",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#6495ED",
-                    "widgets": [
-                        {
-                            "name": "widget-53",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-45",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.2.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-54",
-                    "context": "",
-                    "label": "TOPIC 6",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#FFA500",
-                    "widgets": [
-                        {
-                            "name": "widget-54",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-46",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.2.2",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-55",
-                    "context": "",
-                    "label": "TOPIC 7",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#008B8B",
-                    "widgets": [
-                        {
-                            "name": "widget-55",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-47",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.2.3",
-                            "event": "PRESS"
-                        }
-                    ]
-                },
-                {
-                    "name": "stack-56",
-                    "context": "",
-                    "label": "TOPIC 8",
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "defaultValue": 0,
-                    "color": "#808000",
-                    "widgets": [
-                        {
-                            "name": "widget-56",
-                            "type": "BUTTON"
-                        },
-                        {
-                            "name": "tcwidget-48",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8B.2.2.4",
-                            "event": "PRESS"
-                        }
-                    ]
-                }
-            ]
+          "name": "stack-15",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-15",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-7",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.1.3",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-16",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-16",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "tcwidget-8",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.1.4",
+              "event": "TURN"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "name": "row-3",
+      "weight": 1,
+      "widgetstacks": [
+        {
+          "name": "stack-17",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-17",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-9",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.1",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-18",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-18",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-10",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.2",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-19",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-19",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-11",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.3",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-20",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-20",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-12",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.4",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-21",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-21",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-13",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.1",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-22",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-22",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-14",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.2",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-23",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-23",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-15",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.3",
+              "event": "TURN"
+            }
+          ]
+        },
+        {
+          "name": "stack-24",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-24",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "tcwidget-16",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.4",
+              "event": "TURN"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "row-4",
+      "weight": 1,
+      "widgetstacks": [
+        {
+          "name": "stack-25",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-25",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-17",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.1",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-26",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-26",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-18",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.2",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-27",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-27",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-19",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.3",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-28",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-28",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-20",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.2.4",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-29",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-29",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-21",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.1",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-30",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-30",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-22",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.2",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-31",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-31",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-23",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.3",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-32",
+          "context": "",
+          "label": "",
+          "values": ["OFF", "ON"],
+          "defaultValue": "OFF",
+          "color": "darkgrey",
+          "widgets": [
+            {
+              "name": "widget-32",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-24",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.2.2.4",
+              "event": "PRESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "row-5",
+      "weight": 5,
+      "widgetstacks": [
+        {
+          "name": "stack-33",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-33",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-25",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.1.1.1",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-34",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-34",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-26",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.1.1.2",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-35",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-35",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-27",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.1.1.3",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-36",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-36",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-28",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.1.1.4",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-37",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-37",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-29",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.2.1.1",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-38",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-38",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-30",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.2.1.2",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-39",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-39",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-31",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.2.1.3",
+              "event": "MOVE"
+            }
+          ]
+        },
+        {
+          "name": "stack-40",
+          "context": "",
+          "label": "",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "lightgreen",
+          "widgets": [
+            {
+              "name": "widget-40",
+              "type": "SLIDER_VERTICAL"
+            },
+            {
+              "name": "tcwidget-32",
+              "tilechain": "tilechain-1",
+              "identifier": "4F.2.1.4",
+              "event": "MOVE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "row-6",
+      "weight": 1,
+      "widgetstacks": [
+        {
+          "name": "stack-41",
+          "context": "",
+          "label": "ZONE 1",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-41",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-33",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.1.1",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-42",
+          "context": "",
+          "label": "ZONE 2",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-42",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-34",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.1.2",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-43",
+          "context": "",
+          "label": "ZONE 3",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-43",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-35",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.1.3",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-44",
+          "context": "",
+          "label": "ZONE 4",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-44",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-36",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.1.4",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-45",
+          "context": "",
+          "label": "ZONE 5",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-45",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-37",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.1.1",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-46",
+          "context": "",
+          "label": "ZONE 6",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-46",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-38",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.1.2",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-47",
+          "context": "",
+          "label": "ZONE 7",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-47",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-39",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.1.3",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-48",
+          "context": "",
+          "label": "ZONE 8",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#ff7575",
+          "widgets": [
+            {
+              "name": "widget-48",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-40",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.1.4",
+              "event": "PRESS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "row-7",
+      "weight": 1,
+      "widgetstacks": [
+        {
+          "name": "stack-49",
+          "context": "",
+          "label": "TOPIC 1",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#008000",
+          "widgets": [
+            {
+              "name": "widget-49",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-41",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.2.1",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-50",
+          "context": "",
+          "label": "TOPIC 2",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#FFA500",
+          "widgets": [
+            {
+              "name": "widget-50",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-42",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.2.2",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-51",
+          "context": "",
+          "label": "TOPIC 3",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#FF0000",
+          "widgets": [
+            {
+              "name": "widget-51",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-43",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.2.3",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-52",
+          "context": "",
+          "label": "TOPIC 4",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#800080",
+          "widgets": [
+            {
+              "name": "widget-52",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-44",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.1.2.4",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-53",
+          "context": "",
+          "label": "TOPIC 5",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#6495ED",
+          "widgets": [
+            {
+              "name": "widget-53",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-45",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.2.1",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-54",
+          "context": "",
+          "label": "TOPIC 6",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#FFA500",
+          "widgets": [
+            {
+              "name": "widget-54",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-46",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.2.2",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-55",
+          "context": "",
+          "label": "TOPIC 7",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#008B8B",
+          "widgets": [
+            {
+              "name": "widget-55",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-47",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.2.3",
+              "event": "PRESS"
+            }
+          ]
+        },
+        {
+          "name": "stack-56",
+          "context": "",
+          "label": "TOPIC 8",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "defaultValue": 0,
+          "color": "#808000",
+          "widgets": [
+            {
+              "name": "widget-56",
+              "type": "BUTTON"
+            },
+            {
+              "name": "tcwidget-48",
+              "tilechain": "tilechain-1",
+              "identifier": "8B.2.2.4",
+              "event": "PRESS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

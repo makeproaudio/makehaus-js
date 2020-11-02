@@ -1,40 +1,40 @@
 {
-    "title": "MakeHaus Simple 8 Encoder Turn",
-    "tilechains": [
+  "title": "MakeHaus Simple 8 Encoder Turn",
+  "tilechains": [
+    {
+      "name": "tilechain-1",
+      "address": "localhost",
+      "port": 8192
+    }
+  ],
+  "rows": [
+    {
+      "name": "row-1",
+      "weight": 1,
+      "widgetstacks": [
         {
-            "name": "tilechain-1",
-            "address": "localhost",
-            "port": 8192
+          "name": "stack-1",
+          "context": "context",
+          "label": "label",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "defaultValue": 0,
+          "color": "#00ff00",
+          "widgets": [
+            {
+              "name": "slider",
+              "type": "SLIDER_HORIZONTAL"
+            },
+            {
+              "name": "encoder",
+              "tilechain": "tilechain-1",
+              "identifier": "8E.1.1.1",
+              "event": "TURN"
+            }
+          ]
         }
-    ],
-    "rows": [
-        {
-            "name": "row-1",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-1",
-                    "context": "context",
-                    "label": "label",
-                    "min": 0,
-                    "max": 100,
-                    "step": 2,
-                    "defaultValue": 0,
-                    "color": "#00ff00",
-                    "widgets": [
-                        {
-                            "name": "slider",
-                            "type": "SLIDER_HORIZONTAL"
-                        },
-                        {
-                            "name": "encoder",
-                            "tilechain": "tilechain-1",
-                            "identifier": "8E.1.1.1",
-                            "event": "TURN"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }

@@ -55,7 +55,7 @@ class Layouter {
                 this.spawnTCWidget(layout, w, stackForWidget, (widget: Widget) => {
                   stackForWidget.addWidget(widget);
                   stackForWidget.sync();
-                  if (Array.from(this.expectedWidgets.values()).filter(val => val === false).length === 0) {
+                  if (Array.from(this.expectedWidgets.values()).filter((val) => val === false).length === 0) {
                     callback();
                   }
                 });
@@ -128,7 +128,7 @@ class Layouter {
 
   spawnTCWidget = (layout: Layout, w: WidgetModel, stack: StackBase, callback: (tcw: Widget) => void) => {
     if (w.tilechain) {
-      const { address: host, port } = layout.tilechains!.find(tc => tc.name === w.tilechain!)! as TileChain;
+      const { address: host, port } = layout.tilechains!.find((tc) => tc.name === w.tilechain!)! as TileChain;
       const identifier = w.identifier!;
       this.expectedWidgets.set(JSON.stringify({ host, port, identifier }), false);
       TileChainWidgetManager.getWhenAvailable({ host, port, identifier }, (tcwResponse: TCWidgetResponse) => {

@@ -1,0 +1,18 @@
+name: Build
+on: [push]
+
+jobs:
+  build_on_linux:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 10
+      - name: Install dependencies
+        run: npm install
+      - name: Compile TypeScript
+        run: npm run compile
+      - name: Build
+        run: npm run build

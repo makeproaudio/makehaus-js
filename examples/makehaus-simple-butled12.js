@@ -22,7 +22,7 @@ MakeHaus.init(
     const stack = Stacks.get('stack-1');
     /* Create a parameter. */
     const param = Parameters.newParameter('maker', stack.name());
-    stack.bind(param, evt => {
+    stack.bind(param, (evt) => {
       /* Make sure that the value is not undefined */
       if (evt.value !== undefined)
         if (evt.value === 'ON')

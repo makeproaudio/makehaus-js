@@ -25,7 +25,7 @@ export abstract class TCWidget extends WidgetBase {
   }
 
   removeTCWListener(listener: any) {
-    const index = this.widgetListeners.findIndex(val => listener === val);
+    const index = this.widgetListeners.findIndex((val) => listener === val);
     if (index > -1) {
       this.widgetListeners = this.widgetListeners.splice(index, 1);
     }

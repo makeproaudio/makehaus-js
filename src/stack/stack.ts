@@ -188,7 +188,7 @@ export class StackBase implements Stack {
   }
 
   private raiseUIEvent(evt: StackEvent): void {
-    this.widgets().forEach(w => {
+    this.widgets().forEach((w) => {
       const wb: WidgetBase = w as WidgetBase;
       if (this._parameter) {
         wb.setProperty(evt, { min: this._parameter!.getMetadata('min'), max: this._parameter!.getMetadata('max') });
@@ -203,7 +203,7 @@ export class StackBase implements Stack {
       /* Hardware widget was Pressed */
       case WidgetEventType.PRESS:
         /* For every widget part of this stack, tell the widget that its PRESSED state was changed */
-        this.widgets().map(w => (w as WidgetBase).setPressedState(evt));
+        this.widgets().map((w) => (w as WidgetBase).setPressedState(evt));
         /* Depending on the application logic, update the value of the parameter */
         if (evt.val === false) {
           if (this.parameter()) {
@@ -213,7 +213,7 @@ export class StackBase implements Stack {
         break;
       case WidgetEventType.TOUCH:
         /* For every widget part of this stack, tell the widget that its TOUCH state was changed */
-        this.widgets().map(w => (w as WidgetBase).setTouchedState(evt));
+        this.widgets().map((w) => (w as WidgetBase).setTouchedState(evt));
         break;
       case WidgetEventType.CHANGE_RELATIVE:
         /* Depending on the application logic, update the value of the parameter */
@@ -387,7 +387,7 @@ export class StackBase implements Stack {
   }
 
   setWidgetsType(type: WidgetType): void {
-    this.widgets().forEach(w => w.setType(type));
+    this.widgets().forEach((w) => w.setType(type));
   }
 }
 

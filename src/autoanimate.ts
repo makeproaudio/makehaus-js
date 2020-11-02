@@ -42,9 +42,9 @@ class EncoderFaderAnimator {
   }
 
   setEncoderTile(tile: TileEncoder8 | TileEncoder12) {
-    tile.widgets.forEach(w => {
-      w.on(EncoderEvents.RIGHT, encoder => {
-        this.faderTiles.forEach(faderTile => {
+    tile.widgets.forEach((w) => {
+      w.on(EncoderEvents.RIGHT, (encoder) => {
+        this.faderTiles.forEach((faderTile) => {
           const fader = faderTile.widgets[tile.widgets.indexOf(w) % 4];
           if (fader) {
             fader.setValue(fader.getValue() + 1000);
@@ -52,9 +52,9 @@ class EncoderFaderAnimator {
         });
       });
     });
-    tile.widgets.forEach(w => {
-      w.on(EncoderEvents.LEFT, encoder => {
-        this.faderTiles.forEach(faderTile => {
+    tile.widgets.forEach((w) => {
+      w.on(EncoderEvents.LEFT, (encoder) => {
+        this.faderTiles.forEach((faderTile) => {
           const fader = faderTile.widgets[tile.widgets.indexOf(w) % 4];
           if (fader) {
             fader.setValue(fader.getValue() - 1000);
@@ -73,9 +73,9 @@ class EncoderButtonAnimator {
   }
 
   setEncoderTile(tile: TileEncoder8 | TileEncoder12) {
-    tile.widgets.forEach(w => {
-      w.on(EncoderEvents.RELEASED, encoder => {
-        this.buttonTile.forEach(buttonTile => {
+    tile.widgets.forEach((w) => {
+      w.on(EncoderEvents.RELEASED, (encoder) => {
+        this.buttonTile.forEach((buttonTile) => {
           buttonTile.widgets.forEach((b: LedButton) => {
             b.setColor(ColorCyler.nextRandom());
           });

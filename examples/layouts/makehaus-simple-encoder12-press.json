@@ -1,44 +1,38 @@
 {
-    "title": "MakeHaus Simple 12 Encoder Press",
-    "tilechains": [
+  "title": "MakeHaus Simple 12 Encoder Press",
+  "tilechains": [
+    {
+      "name": "tilechain-1",
+      "address": "localhost",
+      "port": 8192
+    }
+  ],
+  "rows": [
+    {
+      "name": "row-1",
+      "weight": 1,
+      "widgetstacks": [
         {
-            "name": "tilechain-1",
-            "address": "localhost",
-            "port": 8192
+          "name": "stack-1",
+          "context": "context",
+          "label": "label",
+          "values": ["Alpha", "Beta", "Gamma", "Delta", "Epsilon"],
+          "defaultValue": "Alpha",
+          "color": "#00ff00",
+          "widgets": [
+            {
+              "name": "selector",
+              "type": "SELECTOR_VERTICAL"
+            },
+            {
+              "name": "encoder",
+              "tilechain": "tilechain-1",
+              "identifier": "12E.1.1.1",
+              "event": "PRESS"
+            }
+          ]
         }
-    ],
-    "rows": [
-        {
-            "name": "row-1",
-            "weight": 1,
-            "widgetstacks": [
-                {
-                    "name": "stack-1",
-                    "context": "context",
-                    "label": "label",
-                    "values": [
-                        "Alpha",
-                        "Beta",
-                        "Gamma",
-                        "Delta",
-                        "Epsilon"
-                    ],
-                    "defaultValue": "Alpha",
-                    "color": "#00ff00",
-                    "widgets": [
-                        {
-                            "name": "selector",
-                            "type": "SELECTOR_VERTICAL"
-                        },
-                        {
-                            "name": "encoder",
-                            "tilechain": "tilechain-1",
-                            "identifier": "12E.1.1.1",
-                            "event": "PRESS"
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }

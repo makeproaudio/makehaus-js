@@ -14,11 +14,11 @@ const jsonPath = path.join(__dirname, 'layouts/makehaus-full-tablet.json');
 const layoutJson = fs.readFileSync(jsonPath);
 
 const stackIds = (start, end) => {
-  return _.range(start, end).map(id => 'stack-' + id);
+  return _.range(start, end).map((id) => 'stack-' + id);
 };
 
-const stacksForIds = stackIdArray => {
-  return Stacks.getAll().filter(stack => stackIdArray.includes(stack.name()));
+const stacksForIds = (stackIdArray) => {
+  return Stacks.getAll().filter((stack) => stackIdArray.includes(stack.name()));
 };
 
 const webappPort = 3001;
@@ -55,7 +55,7 @@ function animateFunctionButtons(stacks) {
     const functionButtonsPrefix = 'FUNC';
     let i = 0;
 
-    stacks.forEach(stack => {
+    stacks.forEach((stack) => {
       stack.setParameterType({ type: ParameterType.STRING, value: functionButtonsPrefix + '-' + ++i });
       /* By default, when the parameter type of a stack is changed
        * all the UI widgets of that stack transform to a widget of a certain type.
@@ -64,13 +64,13 @@ function animateFunctionButtons(stacks) {
     });
   })();
 
-  stacks.forEach(stack => {
+  stacks.forEach((stack) => {
     const param = Parameters.newParameter('maker', stack.name());
-    stack.bind(param, evt => {
+    stack.bind(param, (evt) => {
       if (evt.value !== undefined) {
-        rows([2, 3, 5]).forEach(row => {
+        rows([2, 3, 5]).forEach((row) => {
           const rc = randomColor();
-          row.stacks().forEach(stack => {
+          row.stacks().forEach((stack) => {
             stack.setColor(rc);
           });
         });
@@ -79,16 +79,16 @@ function animateFunctionButtons(stacks) {
   });
 }
 
-const animateOnOffButtons = stacks => {
+const animateOnOffButtons = (stacks) => {
   const colorOn = '#EF9947';
   const colorOff = '#646C73';
 
   (() => {
-    stacks.forEach(s => {
+    stacks.forEach((s) => {
       /* override colors in the layout json by initializing them all to off by default */
       s.setColor(colorOff);
       const param = Parameters.newParameter('maker', s.name());
-      s.bind(param, evt => {
+      s.bind(param, (evt) => {
         if (evt.value === 'ON') {
           s.setColor(colorOn);
         } else if (evt.value === 'OFF') {
@@ -99,7 +99,7 @@ const animateOnOffButtons = stacks => {
   })();
 };
 
-const animateSelectors = stacks => {
+const animateSelectors = (stacks) => {
   /* Define hues to be used in the animator */
   const primaryHues = [0, 127, 230, 35, 73, 174, 270, 329];
   const primaryLightness = 0.5;
@@ -107,7 +107,7 @@ const animateSelectors = stacks => {
   const commonSaturation = 1;
 
   /* we'll use a simple index based approach for getting the appropriate hue from the */
-  const hueForStack = stack => {
+  const hueForStack = (stack) => {
     const index = stacks.primary.indexOf(stack);
     return primaryHues[index];
   };
@@ -121,7 +121,7 @@ const animateSelectors = stacks => {
     const selector1Prefix = 'TOPIC';
 
     let i = 0;
-    stacks.primary.forEach(stack => {
+    stacks.primary.forEach((stack) => {
       const hue = hueForStack(stack);
       stack.setHsl(hue, commonSaturation, primaryLightness);
 
@@ -131,7 +131,7 @@ const animateSelectors = stacks => {
 
     const selector2Prefix = 'ZONE';
     i = 0;
-    stacks.secondary.forEach(stack => {
+    stacks.secondary.forEach((stack) => {
       const hue = hueForStack(selectedPrimary);
       stack.setHsl(hue, commonSaturation, secondaryLightness);
 
@@ -143,9 +143,9 @@ const animateSelectors = stacks => {
   })();
 
   /* tune into parameter value changes on the each of the primary selector stacks */
-  stacks.primary.forEach(s => {
+  stacks.primary.forEach((s) => {
     const param = Parameters.newParameter('maker', s.name());
-    s.bind(param, evt => {
+    s.bind(param, (evt) => {
       if (evt.value !== undefined) {
         /* since the press event of the ui buttons has been subscribed to
          * in the layout json, updated values will be received here
@@ -164,16 +164,16 @@ const animateSelectors = stacks => {
   /* simple handler to change colors of primary and secondary selectors */
   const handleSelectedPrimary = () => {
     const hue = hueForStack(selectedPrimary);
-    stacks.secondary.forEach(stack => stack.setHsl(hue, commonSaturation, secondaryLightness));
+    stacks.secondary.forEach((stack) => stack.setHsl(hue, commonSaturation, secondaryLightness));
     selectedSecondary.setHsl(hue, commonSaturation, primaryLightness);
     randomizeRows();
   };
 
   /* similar to primary selector stacks,
    *tune into parameter value changes on the each of the secondary selector stacks */
-  stacks.secondary.forEach(s => {
+  stacks.secondary.forEach((s) => {
     const param = Parameters.newParameter('maker', s.name());
-    s.bind(param, evt => {
+    s.bind(param, (evt) => {
       if (evt.value !== undefined) {
         selectedSecondary = s;
         handleSelectedSecondary();
@@ -184,20 +184,20 @@ const animateSelectors = stacks => {
   /* simple handler to change colors of secondary selectors */
   const handleSelectedSecondary = () => {
     const hue = hueForStack(selectedPrimary);
-    stacks.secondary.forEach(stack => stack.setHsl(hue, commonSaturation, secondaryLightness));
+    stacks.secondary.forEach((stack) => stack.setHsl(hue, commonSaturation, secondaryLightness));
     selectedSecondary.setHsl(hue, commonSaturation, primaryLightness);
     randomizeRows();
   };
 };
 
 const randomizeRows = () => {
-  rows([2, 3, 5]).forEach(row => {
-    row.stacks().forEach(stack => {
+  rows([2, 3, 5]).forEach((row) => {
+    row.stacks().forEach((stack) => {
       stack.setValue(Math.round(Math.random() * 100));
     });
   });
 };
 
-const rows = rowsArray => {
-  return rowsArray.map(i => 'row-' + i).map(i => Rows.get(i));
+const rows = (rowsArray) => {
+  return rowsArray.map((i) => 'row-' + i).map((i) => Rows.get(i));
 };

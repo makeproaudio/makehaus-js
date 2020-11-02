@@ -27,13 +27,13 @@ abstract class TileTextLcdDisplay extends TileBase<TextLcdDisplay> {
   }
 
   setText: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       client.send(what);
     },
   };
 
   setBar: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       client.send(what);
     },
   };

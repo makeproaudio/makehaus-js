@@ -27,10 +27,10 @@ abstract class TileFader extends TileBase<MotorFader> {
   }
 
   faderTouched: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[what.idx] as MotorFader;
       widget.emit(MotorFaderEvents.TOUCHED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const faderListener = l as FaderListener;
         faderListener.onFaderTouched(widget, what.val);
       });
@@ -38,10 +38,10 @@ abstract class TileFader extends TileBase<MotorFader> {
   };
 
   faderReleased: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[what.idx] as MotorFader;
       widget.emit(MotorFaderEvents.UNTOUCHED, widget);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const faderListener = l as FaderListener;
         faderListener.onFaderUntouched(widget, what.val);
       });
@@ -49,10 +49,10 @@ abstract class TileFader extends TileBase<MotorFader> {
   };
 
   faderUpdated: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       const widget = this.widgets[what.idx] as MotorFader;
       widget.emit(MotorFaderEvents.UPDATED, widget, what.val);
-      widget.widgetListeners.forEach(l => {
+      widget.widgetListeners.forEach((l) => {
         const faderListener = l as FaderListener;
         faderListener.onFaderUpdated(widget, what.val);
       });
@@ -60,7 +60,7 @@ abstract class TileFader extends TileBase<MotorFader> {
   };
 
   setFaderValue: NextObserver<ControlEvent> = {
-    next: what => {
+    next: (what) => {
       client.send(what);
     },
   };
