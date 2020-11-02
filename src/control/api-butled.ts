@@ -8,6 +8,7 @@ import { filter } from 'rxjs/operators';
 import { NextObserver } from 'rxjs';
 import { LedButton, ButtonListener, LedButtonEvents } from '../tcwidget/ledbutton';
 import { client } from './client';
+import { ControlEvent } from './model';
 
 /* The abstract base class for all LedButton boards, i.e TileLedButton8 and TileLedButton12 */
 abstract class TileLedButton extends TileBase<LedButton> {

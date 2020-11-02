@@ -14,6 +14,7 @@ import { TileFader4 } from './api-fader';
 import { TileTextLcdDisplayDual } from './api-textlcddisplay';
 import { Stacks } from '../stack/stacks';
 import { StackBase } from '../stack/stack';
+import { ChainInit, ControlEvent } from './model';
 
 export class Hub extends EventEmitter {
   /* Create a Stream where the type of messages we will be handling is of type ControlEvent */

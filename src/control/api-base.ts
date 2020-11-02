@@ -5,6 +5,7 @@ This file is part of MakeHaus JS, the MakeHaus API for Node.js, released under A
 
 import { ReplaySubject } from 'rxjs';
 import { TCWidget } from '../tcwidget/tcwidget-base';
+import { ControlEvent } from './model';
 
 abstract class ControlEventProcessor {
   constructor(evtSubject: ReplaySubject<ControlEvent>) {
