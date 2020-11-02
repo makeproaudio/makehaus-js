@@ -8,6 +8,7 @@ import { filter } from 'rxjs/operators';
 import { NextObserver } from 'rxjs';
 import { MotorFader, FaderListener, MotorFaderEvents } from '../tcwidget/motorfader';
 import { client } from './client';
+import { ControlEvent } from './model';
 
 abstract class TileFader extends TileBase<MotorFader> {
   constructor(evtSubject: any, chainId: string, boardType: BoardType, tileType: Tile, tileIndex: number, size: number) {

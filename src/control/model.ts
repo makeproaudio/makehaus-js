@@ -3,7 +3,7 @@ This file is part of MakeHaus JS, the MakeHaus API for Node.js, released under A
 (c) 2019, 2020 MakeProAudio GmbH and Node.js contributors. All rights reserved.
 */
 
-interface ChainInit {
+export interface ChainInit {
   board_infos: [
     {
       board_type: string;
@@ -15,7 +15,7 @@ interface ChainInit {
   msg_type: string;
 }
 
-interface ControlEvent {
+export interface ControlEvent {
   chain_id: string;
   board_type: string;
   board_idx: number;

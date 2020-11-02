@@ -8,6 +8,7 @@ import { filter } from 'rxjs/operators';
 import { NextObserver } from 'rxjs';
 import { defaultEncoderAccelarator } from './encoder-accelerator';
 import { Encoder, EncoderListener, EncoderEvents } from '../tcwidget/encoder';
+import { ControlEvent } from './model';
 
 abstract class TileEncoder extends TileBase<Encoder> {
   constructor(evtSubject: any, chainId: string, boardType: BoardType, tileType: Tile, tileIndex: number, size: number, comIdentifier: string) {

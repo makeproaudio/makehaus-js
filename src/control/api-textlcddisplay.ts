@@ -8,6 +8,7 @@ import { TileBase, Tile, BoardType } from './api-base';
 import { filter } from 'rxjs/operators';
 import { NextObserver } from 'rxjs';
 import { client } from './client';
+import { ControlEvent } from './model';
 
 abstract class TileTextLcdDisplay extends TileBase<TextLcdDisplay> {
   constructor(evtSubject: any, chainId: string, boardType: BoardType, tileType: Tile, tileIndex: number, size: number) {
