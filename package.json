@@ -1,6 +1,6 @@
 {
   "name": "@makeproaudio/makehaus-js",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A minimalistic nodejs client to speak to the MakeProAudio Tiles Hub",
   "author": "MakeProAudio GmbH",
   "license": "AGPL",
